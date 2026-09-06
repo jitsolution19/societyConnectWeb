@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Greenview Society — Admin Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<div id="login-screen" class="login-wrap" hidden>
+  <div class="login-card">
+    <div class="mark">Admin Portal</div>
+    <div class="tagline">Manage campaigns for Greenview Society.</div>
+    <div class="field">
+      <label for="admin-passcode">Passcode</label>
+      <input id="admin-passcode" type="password" placeholder="Enter admin passcode" />
+    </div>
+    <div id="admin-login-error" class="error-text" hidden></div>
+    <button class="btn btn-primary btn-block" id="admin-login-btn">Sign in</button>
+    <div class="hint">Demo passcode: <strong>admin123</strong></div>
+  </div>
+</div>
+
+<div id="app-screen" hidden>
+  <div class="topbar">
+    <div class="brand">Greenview Society — Admin</div>
+    <div class="who">
+      <div id="who-name"></div>
+      <button id="logout-btn">Sign out</button>
+    </div>
+  </div>
+
+  <div class="admin-shell">
+    <div class="admin-sidebar">
+      <button class="sidebar-item active" id="nav-campaigns">All Campaigns</button>
+      <button class="sidebar-item" id="nav-new">+ New Campaign</button>
+      <button class="sidebar-item" id="nav-services">Service Catalog</button>
+      <button class="sidebar-item" id="nav-members">Members</button>
+      <div id="campaign-nav-list" style="margin-top:16px;"></div>
+    </div>
+    <div class="admin-main" id="main-content"></div>
+  </div>
+</div>
+
+<div id="modal-root"></div>
+
+<script src="/admin.js"></script>
+</body>
+</html>

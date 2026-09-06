@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Greenview Society — Member App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<div id="login-screen" class="login-wrap" hidden>
+  <div class="login-card">
+    <div class="mark">Greenview Society</div>
+    <div class="tagline">Book shared services with your neighbours and unlock bulk discounts together.</div>
+    <div class="field">
+      <label for="login-name">Your name</label>
+      <input id="login-name" type="text" placeholder="e.g. Rahul Mehta" />
+    </div>
+    <div class="field">
+      <label for="login-flat">Flat number</label>
+      <input id="login-flat" type="text" placeholder="e.g. A-204" />
+    </div>
+    <div class="field">
+      <label for="login-phone">Phone number</label>
+      <input id="login-phone" type="tel" placeholder="e.g. 9800000002" />
+    </div>
+    <div id="login-error" class="error-text" hidden></div>
+    <button class="btn btn-primary btn-block" id="login-btn">Continue</button>
+    <div class="hint">Demo tip: log in as an existing resident (phone 9800000002, flat A-204) to see bookings already in progress, or enter a new phone number to join as a new member.</div>
+  </div>
+</div>
+
+<div id="app-screen" hidden>
+  <div class="topbar">
+    <div class="brand">Greenview Society</div>
+    <div class="who">
+      <div id="who-name"></div>
+      <button id="logout-btn">Switch member</button>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="section-heading">Active campaigns</div>
+    <div id="campaign-list"></div>
+
+    <div class="section-heading">My bookings</div>
+    <div id="booking-list"></div>
+  </div>
+</div>
+
+<div id="modal-root"></div>
+
+<script src="/member.js"></script>
+</body>
+</html>

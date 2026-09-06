@@ -1,0 +1,17 @@
+{
+  "name": "society-service-app",
+  "version": "1.0.0",
+  "description": "Society bulk-service booking app (Campaign Engine) - sample service: AC Cleaning",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  }
+}
